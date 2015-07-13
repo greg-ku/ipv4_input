@@ -1,0 +1,18 @@
+.ipv4-input {
+	display: inline-block;
+	border: 1px rgb(210, 210, 210) solid;
+}
+
+.ipv4-input.selected {
+	border-color: rgb(155, 155, 155);
+}
+
+.ipv4-cell {
+	border: none;
+	width: 30px;
+	text-align: center;
+	outline: none;
+}
+
+.ipv4-dot {
+}
