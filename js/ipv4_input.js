@@ -35,7 +35,7 @@
 		if (ipStrArray.length !== 4) return false;
 
 		return ipStrArray.reduce(function(prev, cur) {
-			if (prev === false) return false;
+			if (prev === false || cur.length === 0) return false;
 			return (Number(cur) >= 0 && Number(cur) <= 255) ? true : false;
 		}, true);
 	};

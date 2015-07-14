@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/ipv4_input.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/ipv4_input.css">
+</head>
+<body>
+	<div id="ip1"></div>
+	<button id="button1">set ip</button>
+	<button id="button2">get ip</button>
+	<button id="button3">clear</button>
+	<button id="button4">check valid</button>
+
+	<script>
+		$(function() {
+			$("div").ipv4_input();
+
+			$("#button1").click(function() {
+				$("#ip1").ipv4_input("value", "127.0.0.1");
+			})
+			$("#button2").click(function() {
+				alert( $("#ip1").ipv4_input("value") );
+			})
+			$("#button3").click(function() {
+				$("#ip1").ipv4_input("clear");
+			})
+			$("#button4").click(function() {
+				alert($("#ip1").ipv4_input("valid"));
+			})
+		});
+	</script>
+</body>
+</html>
