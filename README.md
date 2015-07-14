@@ -37,3 +37,8 @@ $("div").ipv4_input("clear");
 ```
 $("div").ipv4_input("valid");				// return bool
 ```
+
+
+## Test
+
+https://rawgit.com/greg-ku/ipv4_input/master/test.html
