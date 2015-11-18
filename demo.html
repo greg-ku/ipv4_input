@@ -13,9 +13,18 @@
 	<button id="button3">clear</button>
 	<button id="button4">check valid</button>
 
+	<br/><br/><br/><br/><br/><br/>
+	<hr/>
+
+	<div id="ip2" class="rwd"></div>
+	<button id="buttonRWD1">set ip</button>
+	<button id="buttonRWD2">get ip</button>
+	<button id="buttonRWD3">clear</button>
+	<button id="buttonRWD4">check valid</button>
+
 	<script>
 		$(function() {
-			$("div").ipv4_input();
+			$("#ip1").ipv4_input();
 
 			$("#button1").click(function() {
 				$("#ip1").ipv4_input("value", "127.0.0.1");
@@ -28,6 +37,22 @@
 			})
 			$("#button4").click(function() {
 				alert($("#ip1").ipv4_input("valid"));
+			})
+
+			// demo RWD
+			$("#ip2").ipv4_input();
+
+			$("#buttonRWD1").click(function() {
+				$("#ip2").ipv4_input("value", "127.0.0.1");
+			})
+			$("#buttonRWD2").click(function() {
+				alert( $("#ip2").ipv4_input("value") );
+			})
+			$("#buttonRWD3").click(function() {
+				$("#ip2").ipv4_input("clear");
+			})
+			$("#buttonRWD4").click(function() {
+				alert($("#ip2").ipv4_input("valid"));
 			})
 		});
 	</script>

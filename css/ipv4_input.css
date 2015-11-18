@@ -16,3 +16,59 @@
 
 .ipv4-dot {
 }
+
+/* bootstrap's RWD style */
+.ipv4-input.rwd {
+	display: block;
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.ipv4-input.selected.rwd  {
+	border-color: #66afe9;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.rwd .ipv4-cell  {
+	border-radius: 4px;
+	height: 95%;
+	width: 24.5%;
+}
+
+.rwd .ipv4-dot  {
+}
+
+@media screen and (min-width: 1200px) {
+.rwd .ipv4-cell  {
+	width: 24.5%;
+}
+} 
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+.rwd .ipv4-cell  {
+	width: 24.4%;
+}
+} 
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.rwd .ipv4-cell  {
+	width: 24.3%;
+}
+} 
+
+@media screen and (max-width: 767px) {
+.rwd .ipv4-cell  {
+	width: 23.8%;
+}
+} 
+
+@media screen and (max-width: 480px) {
+.rwd .ipv4-cell  {
+	width: 23.5%;
+}
+} 
