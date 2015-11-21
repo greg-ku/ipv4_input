@@ -1,0 +1,23 @@
+{
+  "name": "jquery-ipv4-input",
+  "version": "1.0.0",
+  "description": "A jQuery plugin provides Windows-style IP input.",
+  "main": "js/ipv4_input.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greg-ku/ipv4_input.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "author": "greg-ku",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greg-ku/ipv4_input/issues"
+  },
+  "homepage": "https://github.com/greg-ku/ipv4_input"
+}
