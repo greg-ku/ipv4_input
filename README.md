@@ -33,10 +33,26 @@ $("div").ipv4_input("valid");				// return bool
 ### responsive
 
 ```
-<div class='rwd'></div>
+$("div").ipv4_input("rwd");
 ```
 
+### set properties at once
+
+```
+$("div").ipv4_input({"rwd": true, "value": "127.0.0.1"});
+```
 
 ## Demo
 
 https://rawgit.com/greg-ku/ipv4_input/master/demo.html
+
+## Change log
+
+### 1.0.1
+
+- refine responsive css
+
+### 1.1.0
+
+- able to set responsive in script
+- able to set properties by passing an object

@@ -142,30 +142,47 @@
 			});
 		});
 
-		if (action == "value") {
-			if (value === undefined)	// get func
-				return getCurIPStr.call(this);
+		var process = function(act, v) {
+			if (act == "rwd") {
+				(v === undefined)? this.toggleClass("rwd") : this.toggleClass("rwd", v);
+			}
 
-			// set func
-			if (!isValidIPStr(value)) throw new Error("invalid ip address");
+			if (act == "value") {
+				if (v === undefined)	// get func
+					return getCurIPStr.call(this);
 
-			var strArray = value.split(".");
-			this.find(".ipv4-cell").each(function(index, cell) {
-				$(cell).val(strArray[index]);
-			});
+				// set func
+				if (!isValidIPStr(v)) throw new Error("invalid ip address");
+
+				var strArray = v.split(".");
+				this.find(".ipv4-cell").each(function(index, cell) {
+					$(cell).val(strArray[index]);
+				});
+			}
+
+			if (act == "valid") {
+				return isValidIPStr(getCurIPStr.call(this));
+			}
+
+			if (act == "clear") {
+				this.find(".ipv4-cell").each(function(index, cell) {
+					$(cell).val("");
+				});
+			}
+			return this;
 		}
 
-		if (action == "valid") {
-			return isValidIPStr(getCurIPStr.call(this));
+		
+		var rtn = this;
+		if ($.type(action) === "object") { // set multiple values
+			var props = action;
+			for(var prop in props)
+				process.call(this, prop, action[prop]);
+		} else { // set one value
+			rtn = process.call(this, action, value);
 		}
 
-		if (action == "clear") {
-			this.find(".ipv4-cell").each(function(index, cell) {
-				$(cell).val("");
-			});
-		}
-
-		return this;
+		return rtn;
 	};
 
 }(jQuery));

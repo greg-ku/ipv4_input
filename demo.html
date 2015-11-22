@@ -16,7 +16,7 @@
 	<br/><br/><br/><br/><br/><br/>
 	<hr/>
 
-	<div id="ip2" class="rwd"></div>
+	<div id="ip2"></div>
 	<button id="buttonRWD1">set ip</button>
 	<button id="buttonRWD2">get ip</button>
 	<button id="buttonRWD3">clear</button>
@@ -40,8 +40,7 @@
 			})
 
 			// demo RWD
-			$("#ip2").ipv4_input();
-
+			$("#ip2").ipv4_input({"rwd": true, "value": "192.168.0.1"});
 			$("#buttonRWD1").click(function() {
 				$("#ip2").ipv4_input("value", "127.0.0.1");
 			})
