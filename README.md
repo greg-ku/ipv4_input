@@ -56,7 +56,7 @@ $("div").ipv4_input({"rwd": true, "value": "127.0.0.1"});
 
 ## Demo
 
-[https://rawgit.com/greg-ku/ipv4_input/master/demo.html](Try it)
+[Try it](https://rawgit.com/greg-ku/ipv4_input/master/demo.html)
 
 ## Change log
 
