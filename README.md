@@ -2,6 +2,18 @@
 
 A jQuery plug-in that similar to windows IP input's style and behavior.
 
+## Installation
+
+```
+npm install --save jquery-ipv4-input
+```
+
+or
+
+```
+bower install --save jquery-ipv4-input
+```
+
 ## Usage
 
 ### render input
@@ -44,7 +56,7 @@ $("div").ipv4_input({"rwd": true, "value": "127.0.0.1"});
 
 ## Demo
 
-https://rawgit.com/greg-ku/ipv4_input/master/demo.html
+[https://rawgit.com/greg-ku/ipv4_input/master/demo.html](Try it)
 
 ## Change log
 
